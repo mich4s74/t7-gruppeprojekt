@@ -19,7 +19,7 @@ body {
 
 header {
   grid-area: header;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 main {
@@ -28,18 +28,18 @@ main {
 
 footer {
   grid-area: footer;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 #gallery {
-  --auto-grid-min-size: 16rem;
+  --auto-grid-min-size: 22rem;
   display: grid;
   grid-template-columns: repeat(
     auto-fill,
     minmax(var(--auto-grid-min-size), 1fr)
   );
   grid-gap: 1rem;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .gallery_item {
