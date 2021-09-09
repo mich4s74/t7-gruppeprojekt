@@ -3,3 +3,57 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+body {
+}
+
+#grid_container {
+  display: grid;
+  grid-template-areas:
+    "header gallery"
+    "header footer";
+  grid-template-columns: 1fr 8fr;
+  grid-template-rows: 8fr 1fr;
+  height: 100vh;
+}
+
+header {
+  grid-area: header;
+  padding: 2rem;
+}
+
+main {
+  grid-area: gallery;
+}
+
+footer {
+  grid-area: footer;
+  padding: 2rem;
+}
+
+#gallery {
+  --auto-grid-min-size: 16rem;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--auto-grid-min-size), 1fr)
+  );
+  grid-gap: 1rem;
+  padding: 2rem;
+}
+
+.gallery_item {
+  background: darkgoldenrod;
+  padding: 5rem 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav {
+  margin-bottom: 2rem;
+}
