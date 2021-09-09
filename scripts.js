@@ -1,8 +1,8 @@
-const url = "";
+const url = "https://artister-c311.restdb.io/rest/artister";
 
 const options = {
   headers: {
-    "x-apikey": "",
+    "x-apikey": "613a5a7043cedb6d1f97ef14",
   },
 };
 
