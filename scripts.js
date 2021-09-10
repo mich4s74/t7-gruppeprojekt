@@ -15,7 +15,7 @@ async function hentData() {
 function vis(json) {
   console.log(json);
 
-  const container = document.querySelector(".gallery_item");
+  const container = document.querySelector("#gallery");
   const template = document.querySelector("template");
 
   json.forEach((artist) => {
