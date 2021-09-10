@@ -73,6 +73,7 @@ nav ul {
 header > .logo {
   align-self: center;
   padding-top: 1rem;
+  max-width: 5rem;
 }
 
 header > #hamburger {
