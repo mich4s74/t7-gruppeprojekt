@@ -20,10 +20,7 @@ function vis(json) {
 
   json.forEach((artist) => {
     const klon = template.cloneNode(true).content;
-
-    const md = "-md.jpg";
-    klon.querySelector("img").src = "images/" + artist.navn + md;
-
+    klon.querySelector("img").src = "images/" + artist.billedenavn;
     container.appendChild(klon);
   });
 }
