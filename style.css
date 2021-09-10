@@ -55,7 +55,7 @@ footer {
 
 /* Galleri GRID */
 #gallery {
-  --auto-grid-min-size: 18rem;
+  --auto-grid-min-size: 22rem;
   display: grid;
   grid-template-columns: repeat(
     auto-fill,
