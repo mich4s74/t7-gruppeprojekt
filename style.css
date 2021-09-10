@@ -61,13 +61,13 @@ footer {
     auto-fill,
     minmax(var(--auto-grid-min-size), 1fr)
   );
+  background-color: #000;
 }
 
 #gallery > #artist {
   width: 100%;
-  align-items: center;
-  justify-items: center;
-  text-align: center;
+  align-self: center;
+  justify-self: center;
 }
 
 /* Navigation */
