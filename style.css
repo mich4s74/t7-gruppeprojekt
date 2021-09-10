@@ -64,10 +64,17 @@ footer {
   background-color: #000;
 }
 
-#gallery > #artist {
-  width: 100%;
-  align-self: center;
-  justify-self: center;
+#artist {
+  display: grid;
+  place-items: center;
+  place-content: center;
+  overflow: hidden;
+}
+
+#artist .navn,
+#artist .billede {
+  grid-area: 1/1;
+  color: #fff;
 }
 
 /* Navigation */
