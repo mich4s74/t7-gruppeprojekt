@@ -55,7 +55,7 @@ footer {
 
 /* Galleri GRID */
 #gallery {
-  --auto-grid-min-size: 18rem;
+  --auto-grid-min-size: 16rem;
   display: grid;
   grid-template-columns: repeat(
     auto-fill,
@@ -64,10 +64,38 @@ footer {
   background-color: #000;
 }
 
-#gallery > #artist {
+#artist {
+  display: grid;
+  place-items: center;
+  place-content: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#artist .navn,
+#artist .billede {
+  grid-area: 1/1;
+  color: #fff;
+}
+
+#artist .billede {
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
+}
+
+#artist .billede:hover {
+  filter: grayscale(0%);
+}
+
+#artist .navn {
+  z-index: 110;
+}
+
+#artist .overlay {
+  grid-area: 1/1;
+  background-color: #7a44255d;
   width: 100%;
-  align-self: center;
-  justify-self: center;
+  height: 100%;
 }
 
 /* Navigation */
