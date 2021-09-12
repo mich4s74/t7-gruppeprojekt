@@ -15,36 +15,38 @@
     <h2 class="navn"></h2>
 </body>
 <script>
-    document.addEventListener("DOMContentLoaded", loadJSON);
+    const urlParams = new URLSearchParams(window.location.search);
+    billedUrl = "images/resized_images/";
+    const id = urlParams.get("id");
 
-    const url = "https://artister-c311.restdb.io/rest/artister"
+
+    document.addEventListener("DOMContentLoaded", getJson);
+
+    const url = `https://artister-c311.restdb.io/rest/artister/${id}`
     const myHeaders = {
         headers: {
             "x-apikey": "613a5a7043cedb6d1f97ef14",
         },
     };
 
-    const urlParams = new URLSearchParams(window.location.search);
-    const id = urlParams.get("id");
-
     console.log("ID", id);
 
-    async function loadJSON() {
-        const JSONData = await fetch(`https://artister-c311.restdb.io/rest/artister/${id}`, {
-            headers: myHeaders,
-        });
-        artist = await JSONData.json();
+    async function getJson() {
+        let jsonData = await fetch(url, myHeaders);
+        artist = await jsonData.json();
+        console.log("Artister", artist)
 
-        console.log("Artister", artist);
         visArtist(artist);
-
-        function visArtist() {
-            document.querySelector(".navn").textContent = artist.navn;
-            document.querySelector(
-                ".billede"
-            ).src = billedUrl + artister.billedenavn;
-        }
     }
+
+
+
+    function visArtist() {
+        document.querySelector(".navn").textContent = artist.navn;
+        document.querySelector(
+            ".billede"
+        ).src = billedUrl + artist.billedenavn;
+    };
 </script>
 
 </html>
