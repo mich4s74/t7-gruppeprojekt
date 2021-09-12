@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>TITLE</title>
+    <meta charset="UTF-8">
+    <meta name="robots" content="index,follow"> <!-- Helps with crawlers -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Helps with responsiveness -->
+    <meta name="description" content="This is the description of the website..."> <!-- Description of the website -->
+    <link rel="icon" href="/html5.ico"> <!-- Favicon -->
+</head>
+
+<body>
+    <img class="billede" src="" alt="" />
+    <h2 class="navn"></h2>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", loadJSON);
+
+    const url = "https://artister-c311.restdb.io/rest/artister"
+    const myHeaders = {
+        headers: {
+            "x-apikey": "613a5a7043cedb6d1f97ef14",
+        },
+    };
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get("id");
+
+    console.log("ID", id);
+
+    async function loadJSON() {
+        const JSONData = await fetch(`https://artister-c311.restdb.io/rest/artister/${id}`, {
+            headers: myHeaders,
+        });
+        artist = await JSONData.json();
+
+        console.log("Artister", artist);
+        visArtist(artist);
+
+        function visArtist() {
+            document.querySelector(".navn").textContent = artist.navn;
+            document.querySelector(
+                ".billede"
+            ).src = billedUrl + artister.billedenavn;
+        }
+    }
+</script>
+
+</html>

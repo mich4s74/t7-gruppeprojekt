@@ -11,11 +11,12 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 img {
   max-width: 100%;
 }
-body {
-}
+
+body {}
 
 img {
   width: 100%;
@@ -55,12 +56,10 @@ footer {
 
 /* Galleri GRID */
 #gallery {
-  --auto-grid-min-size: 16rem;
+  --auto-grid-min-size: 30rem;
   display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(var(--auto-grid-min-size), 1fr)
-  );
+  grid-template-columns: repeat(auto-fill,
+      minmax(var(--auto-grid-min-size), 1fr));
   background-color: #000;
 }
 
@@ -73,9 +72,14 @@ footer {
 }
 
 #artist .navn,
-#artist .billede {
+#artist .billede,
+#artist .genre {
   grid-area: 1/1;
   color: #fff;
+}
+
+#artist .genre {
+  margin-top: 3rem;
 }
 
 #artist .billede {
@@ -87,7 +91,8 @@ footer {
   filter: grayscale(0%);
 }
 
-#artist .navn {
+#artist .navn,
+#artist .genre {
   z-index: 110;
 }
 
@@ -108,19 +113,47 @@ nav ul {
   list-style: none;
 }
 
-header > .logo {
+nav ul li {
+  cursor: pointer;
+}
+
+header>.logo {
   align-self: center;
   padding-top: 1rem;
   max-width: 5rem;
 }
 
-header > #hamburger {
+header>#hamburger {
   display: block;
   align-self: center;
   margin: 2rem 0;
   max-width: 2rem;
 }
 
-header > .om_os {
+header>.om_os {
   align-self: center;
+}
+
+
+.popup {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  text-align: center;
+  position: fixed;
+  display: none;
+  overflow: scroll;
+}
+
+.popup-content {
+  width: 90vw;
+  height: auto;
+  background: #fff;
+  color: #000;
+  text-align: left;
+  padding: 20px;
+  position: absolute;
+  left: 5vw;
+  top: 50px;
 }
