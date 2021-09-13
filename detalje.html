@@ -1,52 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <title>TITLE</title>
-    <meta charset="UTF-8">
-    <meta name="robots" content="index,follow"> <!-- Helps with crawlers -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Helps with responsiveness -->
-    <meta name="description" content="This is the description of the website..."> <!-- Description of the website -->
-    <link rel="icon" href="/html5.ico"> <!-- Favicon -->
-</head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index,follow" />
+    <!-- Helps with crawlers -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Helps with responsiveness -->
+    <meta
+      name="description"
+      content="This is the description of the website..."
+    />
+    <!-- Description of the website -->
+    <link rel="icon" href="/html5.ico" />
+    <!-- Favicon -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Signika+Negative&family=Trirong&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <img class="billede" src="" alt="" />
     <h2 class="navn"></h2>
-</body>
-<script>
+  </body>
+  <script>
     const urlParams = new URLSearchParams(window.location.search);
     billedUrl = "images/resized_images/";
     const id = urlParams.get("id");
 
-
     document.addEventListener("DOMContentLoaded", getJson);
 
-    const url = `https://artister-c311.restdb.io/rest/artister/${id}`
+    const url = `https://artister-c311.restdb.io/rest/artister/${id}`;
     const myHeaders = {
-        headers: {
-            "x-apikey": "613a5a7043cedb6d1f97ef14",
-        },
+      headers: {
+        "x-apikey": "613a5a7043cedb6d1f97ef14",
+      },
     };
 
     console.log("ID", id);
 
     async function getJson() {
-        let jsonData = await fetch(url, myHeaders);
-        artist = await jsonData.json();
-        console.log("Artister", artist)
+      let jsonData = await fetch(url, myHeaders);
+      artist = await jsonData.json();
+      console.log("Artister", artist);
 
-        visArtist(artist);
+      visArtist(artist);
     }
 
-
-
     function visArtist() {
-        document.querySelector(".navn").textContent = artist.navn;
-        document.querySelector(
-            ".billede"
-        ).src = billedUrl + artist.billedenavn;
-    };
-</script>
-
+      document.querySelector(".navn").textContent = artist.navn;
+      document.querySelector(".billede").src = billedUrl + artist.billedenavn;
+    }
+  </script>
 </html>
