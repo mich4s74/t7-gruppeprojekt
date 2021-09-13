@@ -5,10 +5,17 @@ h1 {
 
 }
 
+h2 {
+  font-family: "Signika Negative", sans-serif;
+  font-size: 1.75rem;
+}
 
+h3 {
+  font-family: "Signika Negative", sans-serif;
+  font-size: 1.4375;
+}
 
-
-
-
-
-
+p {
+  font-family: "Trirong", serif;
+  font-size: 1rem;
+}

@@ -16,7 +16,8 @@ img {
   max-width: 100%;
 }
 
-body {}
+body {
+}
 
 img {
   width: 100%;
@@ -58,8 +59,10 @@ footer {
 #gallery {
   --auto-grid-min-size: 30rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill,
-      minmax(var(--auto-grid-min-size), 1fr));
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--auto-grid-min-size), 1fr)
+  );
   background-color: #000;
 }
 
@@ -117,23 +120,22 @@ nav ul li {
   cursor: pointer;
 }
 
-header>.logo {
+header > .logo {
   align-self: center;
   padding-top: 1rem;
   max-width: 5rem;
 }
 
-header>#hamburger {
+header > #hamburger {
   display: block;
   align-self: center;
   margin: 2rem 0;
   max-width: 2rem;
 }
 
-header>.om_os {
+header > .om_os {
   align-self: center;
 }
-
 
 .popup {
   width: 100vw;
