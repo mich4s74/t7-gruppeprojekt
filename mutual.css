@@ -1,10 +1,8 @@
 h1 {
-  font-family: 'Playfair Display', serif;
-  font size: 2.1875rem;
+  font-family: "Playfair Display", serif;
+  font-size: 2.1875rem;
   color: #c74900;
 }
-
-
 
 h2 {
   font-family: "Signika Negative", sans-serif;
@@ -16,10 +14,4 @@ h3 {
 
 p {
   font-family: "Trirong", serif;
-
-
-
-
-
-
-
+}
