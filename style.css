@@ -13,18 +13,12 @@
     "header"
     "gallery"
     "footer";
-  height: 100vh;
   overflow-x: hidden;
 }
 
 header {
   grid-area: header;
-  padding: 1rem;
-  background-color: #fb8c4b;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
 }
 
 main {
@@ -33,9 +27,7 @@ main {
 
 footer {
   grid-area: footer;
-  padding: 1rem;
-  background-color: #000;
-  color: #fff;
+
 }
 
 /* Galleri GRID */
