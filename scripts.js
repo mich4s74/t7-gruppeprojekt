@@ -51,7 +51,7 @@ function visSingle(artist) {
 };
 
 function addEventListenersToButtons() {
-  document.querySelectorAll("header ul li").forEach((elm) => {
+  document.querySelectorAll("#second_nav ul li").forEach((elm) => {
     elm.addEventListener("click", filtrering);
   });
 }

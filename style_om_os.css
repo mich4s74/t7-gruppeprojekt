@@ -1,0 +1,61 @@
+#main_om_os {
+  max-width: none;
+  padding: 0;
+  margin: 0;
+}
+
+#section_one_about {
+  padding: 2rem;
+}
+
+#section_two_about {
+  background-color: #fc8c4c;
+  opacity: 80%;
+  padding: 2rem;
+  justify-content: center;
+}
+
+#section_two_about figure {
+  justify-content: center;
+  text-align: center;
+}
+
+#section_two_about img {
+  border-radius: 50%;
+}
+
+.circular--portrait {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.circular--portrait img {
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 600px) {
+  #section_one_about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 5rem;
+  }
+  #section_two_about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 5rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  #section_two_about {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+    padding: 5rem;
+  }
+}
