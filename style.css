@@ -61,22 +61,26 @@ footer {
 #artist .billede {
   filter: grayscale(100%);
   transition: filter 0.5s ease;
+  object-fit: cover;
+  opacity: 0.3;
 }
 
 #artist .billede:hover {
   filter: grayscale(0%);
+  opacity: 0.6;
 }
 
 #artist .navn,
 #artist .genre {
   z-index: 110;
-  text-shadow: 1px 1px #000;
   pointer-events: none;
 }
 
 #artist .overlay {
   grid-area: 1/1;
-  background-color: #7a44255d;
-  width: 100%;
+  background: #7a44255d;
   height: 100%;
+  width: 100%;
+  overflow: hidden;
+  transition: filter 0.5s ease;
 }
