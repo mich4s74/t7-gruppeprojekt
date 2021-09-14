@@ -14,64 +14,64 @@
     <!-- Description of the website -->
     <link rel="icon" href="/html5.ico" />
     <!-- Favicon -->
+    <link rel="stylesheet" href="mutual.css" />
     <link rel="stylesheet" href="style.css" />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Signika+Negative&family=Trirong&display=swap"
-      rel="stylesheet"
     />
   </head>
 
-<<<<<<< HEAD
-<head>
-  <title>T7 Gruppeprojekt</title>
-  <meta charset="UTF-8" />
-  <meta name="robots" content="index,nofollow" />
-  <!-- Helps with crawlers -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Helps with responsiveness -->
-  <meta name="description" content="This is the description of the website..." />
-  <!-- Description of the website -->
-  <link rel="icon" href="/html5.ico" />
-  <!-- Favicon -->
-  <link rel="stylesheet" href="style.css" />
-<!-- Font til h1 -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-
-</head>
-=======
   <body>
     <div id="grid_container">
       <header>
         <img class="logo" src="images/logo.png" alt="Logo" />
->>>>>>> 15647ffbfc91d3d7e0e6586a8075de4f73505f41
-
-        <img src="./images/hamburger.png" alt="" id="hamburger" />
-
         <nav>
           <ul>
-            <li class="filter" data-artist="alle">Alle</li>
-            <li class="filter" data-artist="Rap">Rap</li>
-            <li class="filter" data-artist="Dancehall">Dancehall</li>
-            <li class="filter" data-artist="Blues Rock">Blues Rock</li>
-            <li class="filter" data-artist="Pop">Pop</li>
+            <li><a href="index.html">Hjem</a></li>
+            <span>//</span>
+            <li><a href="#">Om os</a></li>
+            <span>//</span>
+            <li><a href="factsomgenre.html">Genre</a></li>
+            <span>//</span>
+            <li><a href="#">Musikkens historie</a></li>
           </ul>
         </nav>
-        <div class="om_os">
-          <p>Beskrivelse om os osv.</p>
-        </div>
       </header>
+
+      <section id="intro_header">
+        <img src="images/record.png" alt="" />
+        <div>
+          <h2>We Love Music</h2>
+          <p>
+            Velkommen til getyourmusicinfo.dk. Vi har samlet nogle af de største
+            artister inden for genrene: rock, dancehall, rap og pop. Bladrer
+            igennem galleriet, for at få viden omkring din yndlingsartist.
+          </p>
+        </div>
+      </section>
+
+      <section id="second_nav">
+        <ul>
+          <li class="filter" data-artist="alle">Alle</li>
+          <li class="filter" data-artist="Rap">Rap</li>
+          <li class="filter" data-artist="Dancehall">Dancehall</li>
+          <li class="filter" data-artist="Blues Rock">Blues Rock</li>
+          <li class="filter" data-artist="Pop">Pop</li>
+        </ul>
+      </section>
+
       <main>
         <section id="gallery">
           <template>
             <article id="artist">
-              <div class="overlay"></div>
-              <img class="billede" src="" alt="" />
-              <h2 class="navn"></h2>
-              <p class="beskrivelse"></p>
-              <p class="genre"></p>
-              <p class="hits"></p>
+              <div class="overlay">
+                <img class="billede" src="" alt="" />
+                <h1 class="navn"></h1>
+                <p class="beskrivelse"></p>
+                <p class="genre"></p>
+                <p class="hits"></p>
+              </div>
             </article>
           </template>
         </section>

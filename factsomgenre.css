@@ -2,7 +2,6 @@
   background-color: #c74900;
   color: white;
   padding: 10px;
-  /* max-width: 60vh; */
 }
 
 h1 {
@@ -17,7 +16,22 @@ h1 {
   background-position: right bottom;
 }
 
+<<<<<<< HEAD:genresiden.css
 @media only screen and (min-width: 768px) {
+=======
+@media only screen and (min-width: 800px) {
+  .kasse {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  #firstsection {
+    grid-column: 2/4;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+>>>>>>> 2aa962df5b202e67cb6a40693045b877518f4e27:factsomgenre.css
   .kasse {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
