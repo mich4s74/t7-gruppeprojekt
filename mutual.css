@@ -33,12 +33,13 @@ h3 {
 
 p {
   font-family: "Trirong", serif;
-  font-size: 1rem;
+  font-size: .8rem;
 }
 
 nav,
 nav p,
-header ul {
+header ul,
+#second_nav {
   font-family: "Playfair Display", serif;
   font-size: 0.8rem;
 }
@@ -56,7 +57,7 @@ header,
   height: 3rem;
 }
 
-<<<<<<< HEAD=======@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 480px) {
 
   header,
   #second_nav {
@@ -64,7 +65,7 @@ header,
   }
 }
 
->>>>>>>1d11d06c72c810434f4538491c00633fe0041afd .logo {
+.logo {
   width: 2rem;
   height: auto;
 }
