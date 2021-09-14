@@ -39,14 +39,6 @@ footer {
   background-color: #000;
 }
 
-#artist {
-  display: grid;
-  place-items: center;
-  place-content: center;
-  overflow: hidden;
-  cursor: pointer;
-}
-
 #artist .navn,
 #artist .billede,
 #artist .genre {
@@ -83,4 +75,10 @@ footer {
   width: 100%;
   overflow: hidden;
   transition: filter 0.5s ease;
+  display: grid;
+  display: grid;
+  place-items: center;
+  place-content: center;
+  overflow: hidden;
+  cursor: pointer;
 }
