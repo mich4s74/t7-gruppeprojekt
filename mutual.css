@@ -23,7 +23,7 @@ h2 {
   font-family: "Signika Negative", sans-serif;
   font-size: 1.75rem;
   color: #000;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 h3 {
@@ -39,16 +39,9 @@ p {
 
 nav,
 nav p,
-<<<<<<< HEAD
 header ul {
   font-family: "Playfair Display", serif;
   font-size: 0.8rem;
-=======
-header ul,
-#second_nav ul {
-  font-family: 'Playfair Display', serif;
-  font-size: .8rem;
->>>>>>> 91a7970f61d182a6b823fccdd81d738a667fa537
 }
 
 /* Navigation */
@@ -65,12 +58,10 @@ header,
 }
 
 @media only screen and (min-width: 480px) {
-
   header,
   #second_nav {
     justify-content: space-between;
   }
-
 }
 
 .logo {
@@ -103,7 +94,7 @@ nav ul span {
 nav ul li a:hover,
 header ul li:hover,
 #second_nav ul li:hover {
-  color: #7a2D00;
+  color: #7a2d00;
 }
 
 /* Footer */
@@ -118,7 +109,7 @@ a,
 li,
 span {
   position: relative;
-  padding: .2rem;
+  padding: 0.2rem;
 }
 
 a:after,
@@ -130,7 +121,7 @@ li:after {
   height: 2px;
   left: 50%;
   position: absolute;
-  background: #7a2D00;
+  background: #7a2d00;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }
