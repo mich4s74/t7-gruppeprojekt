@@ -82,13 +82,13 @@ header ul li,
 #second_nav ul li {
   cursor: pointer;
   margin: 0 1rem;
-  color: #000;
+  color: #fff;
 }
 
 nav ul li a,
 #second_nav ul li a,
 nav ul span {
-  color: #000;
+  color: #fff;
   text-decoration: none;
 }
 
