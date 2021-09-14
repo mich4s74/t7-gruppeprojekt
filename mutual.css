@@ -46,28 +46,20 @@ header ul,
 
 /* Navigation */
 
+.logo {
+  width: 2rem;
+  height: auto;
+}
+
 header,
 #second_nav {
   padding: 1rem;
   background-color: #fb8c4b;
   color: #fff;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 3rem;
-}
-
-@media only screen and (min-width: 480px) {
-
-  header,
-  #second_nav {
-    justify-content: space-between;
-  }
-}
-
-.logo {
-  width: 2rem;
-  height: auto;
 }
 
 nav ul,
@@ -131,20 +123,4 @@ a:hover:after,
 li:hover:after {
   width: 100%;
   left: 0;
-}
-
-
-@media only screen and (min-width: 480px) {
-
-  header,
-  #second_nav {
-    justify-content: space-between;
-  }
-
-  a,
-  li,
-  span {
-    padding: .2rem;
-  }
-
 }
