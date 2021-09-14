@@ -8,10 +8,17 @@ h1 {
   color: white;
 }
 
-#secondsection {
+#thirdsection {
+  padding-left: 10px;
   background-image: url(/Billeder_til_andre_sider/vinyl_svg.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right bottom;
 }
 
+<<<<<<< HEAD:genresiden.css
+@media only screen and (min-width: 768px) {
+=======
 @media only screen and (min-width: 800px) {
   .kasse {
     display: grid;
@@ -24,6 +31,7 @@ h1 {
 }
 
 @media only screen and (min-width: 1200px) {
+>>>>>>> 2aa962df5b202e67cb6a40693045b877518f4e27:factsomgenre.css
   .kasse {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -31,5 +39,38 @@ h1 {
 
   #firstsection {
     grid-column: 2/3;
+  }
+  #secondsection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #secondsection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+  }
+
+  h2 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-left: 10px;
+  }
+
+  h3 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-left: 10px;
+  }
+  #thirdsection {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-left: 10px;
+  }
+
+  p {
+    max-width: 60ch;
   }
 }
