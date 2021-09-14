@@ -1,82 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>TITLE</title>
-    <meta charset="UTF-8" />
-    <meta name="robots" content="index,follow" />
-    <!-- Helps with crawlers -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Helps with responsiveness -->
-    <meta
-      name="description"
-      content="This is the description of the website..."
-    />
-    <!-- Description of the website -->
-    <link rel="icon" href="/html5.ico" />
-    <!-- Favicon -->
-    <link rel="stylesheet" href="mutual.css" />
-    <link rel="stylesheet" href="detalje.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Signika+Negative&family=Trirong&display=swap"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body>
-    <header>
-      <img class="logo" src="images/logo.png" alt="Logo" />
-      <nav>
-        <ul>
-          <li><a href="index.html">Hjem</a></li>
-          <span>//</span>
-          <li><a href="#">Om os</a></li>
-          <span>//</span>
-          <li><a href="factsomgenre.html">Genre</a></li>
-          <span>//</span>
-          <li><a href="#">Musikkens historie</a></li>
-        </ul>
-      </nav>
-      <img src="./images/hamburger.png" alt="" id="hamburger" />
-    </header>
+<head>
+  <title>TITLE</title>
+  <meta charset="UTF-8" />
+  <meta name="robots" content="index,follow" />
+  <!-- Helps with crawlers -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Helps with responsiveness -->
+  <meta name="description" content="This is the description of the website..." />
+  <!-- Description of the website -->
+  <link rel="icon" href="/html5.ico" />
+  <!-- Favicon -->
+  <link rel="stylesheet" href="mutual.css" />
+  <link rel="stylesheet" href="detalje.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Signika+Negative&family=Trirong&display=swap"
+    rel="stylesheet" />
+</head>
 
-    <main>
-      <img class="billede" src="" alt="" />
-      <h2 class="navn"></h2>
-      <h3>Største hits:</h3>
-      <h3 class="hits"></h3>
-      <p class="beskrivelse"></p>
-    </main>
-    <footer>Copyright</footer>
-  </body>
-  <script>
-    const urlParams = new URLSearchParams(window.location.search);
-    billedUrl = "images/resized_images/";
-    const id = urlParams.get("id");
+<body>
+  <header>
+    <img class="logo" src="images/logo.png" alt="Logo" />
+    <nav>
+      <ul>
+        <li><a href="index.html">Hjem</a></li>
+        <span>//</span>
+        <li><a href="#">Om os</a></li>
+        <span>//</span>
+        <li><a href="factsomgenre.html">Genre</a></li>
+        <span>//</span>
+        <li><a href="#">Musikkens historie</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    document.addEventListener("DOMContentLoaded", getJson);
+  <main>
+    <img class="billede" src="" alt="" />
+    <h2 class="navn"></h2>
+    <h3>Største hits:</h3>
+    <h3 class="hits"></h3>
+    <p class="beskrivelse"></p>
+  </main>
+  <footer>Copyright</footer>
+</body>
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  billedUrl = "images/resized_images/";
+  const id = urlParams.get("id");
 
-    const url = `https://artister-c311.restdb.io/rest/artister/${id}`;
-    const myHeaders = {
-      headers: {
-        "x-apikey": "613a5a7043cedb6d1f97ef14",
-      },
-    };
+  document.addEventListener("DOMContentLoaded", getJson);
 
-    console.log("ID", id);
+  const url = `https://artister-c311.restdb.io/rest/artister/${id}`;
+  const myHeaders = {
+    headers: {
+      "x-apikey": "613a5a7043cedb6d1f97ef14",
+    },
+  };
 
-    async function getJson() {
-      let jsonData = await fetch(url, myHeaders);
-      artist = await jsonData.json();
-      console.log("Artister", artist);
+  console.log("ID", id);
 
-      visArtist(artist);
-    }
+  async function getJson() {
+    let jsonData = await fetch(url, myHeaders);
+    artist = await jsonData.json();
+    console.log("Artister", artist);
 
-    function visArtist() {
-      document.querySelector(".billede").src = billedUrl + artist.billedenavn;
-      document.querySelector(".navn").textContent = artist.navn;
-      document.querySelector(".hits").textContent = artist.hits;
-      document.querySelector(".beskrivelse").textContent = artist.beskrivelse;
-    }
-  </script>
+    visArtist(artist);
+  }
+
+  function visArtist() {
+    document.querySelector(".billede").src = billedUrl + artist.billedenavn;
+    document.querySelector(".navn").textContent = artist.navn;
+    document.querySelector(".hits").textContent = artist.hits;
+    document.querySelector(".beskrivelse").textContent = artist.beskrivelse;
+  }
+</script>
+
 </html>
