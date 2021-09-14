@@ -32,15 +32,48 @@ h3 {
 
 p {
   font-family: "Trirong", serif;
-  font-size: 1rem;
+  font-size: .8rem;
 }
 
 nav,
-nav p {
+nav p,
+header ul {
   font-family: 'Playfair Display', serif;
-  font-size: 1rem;
+  font-size: .8rem;
 }
 
-nav ul li a:hover {
+
+/* Navigation */
+
+.logo {
+  width: 2rem;
+  height: auto;
+}
+
+#hamburger {
+  width: 32px;
+  height: auto;
+  display: none;
+}
+
+nav ul,
+header ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li,
+header ul li {
+  cursor: pointer;
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li a:hover,
+header ul li:hover {
   color: aqua;
 }
