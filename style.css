@@ -63,7 +63,7 @@ footer {
 }
 
 #artist .genre {
-  margin-top: 3rem;
+  margin-top: 5rem;
 }
 
 #artist .billede {
@@ -78,6 +78,8 @@ footer {
 #artist .navn,
 #artist .genre {
   z-index: 110;
+  text-shadow: 1px 1px #000;
+  pointer-events: none;
 }
 
 #artist .overlay {
@@ -85,32 +87,4 @@ footer {
   background-color: #7a44255d;
   width: 100%;
   height: 100%;
-}
-
-/* Navigation */
-
-.logo {
-  width: 2rem;
-  height: auto;
-}
-
-#hamburger {
-  width: 32px;
-  height: auto;
-  display: none;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-}
-
-nav ul li {
-  cursor: pointer;
-  margin: 0 1rem;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
 }
