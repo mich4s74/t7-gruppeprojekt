@@ -51,7 +51,7 @@ header ul,
   background-color: #fb8c4b;
   color: #fff;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 3rem;
 }
@@ -72,6 +72,7 @@ header nav {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  background-color: #fb8c4b;
 }
 
 /* styling af menu */

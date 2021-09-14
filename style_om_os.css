@@ -10,11 +10,22 @@ h1 {
 
 #section_one_about {
   padding: 1rem;
+  align-items: center;
+  grid-template-columns: 2fr 1fr;
 }
 
 #section_two_about {
   background-color: rgba(252, 140, 76, 0.8);
   justify-content: center;
+  align-content: center;
+}
+
+#logo img {
+  width: 80%;
+}
+
+#logo {
+  justify-self: center;
 }
 
 #section_two_about figure {
@@ -33,12 +44,14 @@ h1 {
   overflow: hidden;
   border-radius: 50%;
 }
+
 .circular--portrait img {
   width: 100%;
   height: auto;
   filter: grayscale(100%);
   transition: filter 0.5s ease;
 }
+
 
 @media (min-width: 425px) {
   #section_one_about {
@@ -47,6 +60,7 @@ h1 {
     gap: 2rem;
     padding: 2rem;
   }
+
   #section_two_about {
     display: grid;
     grid-template-columns: 1fr 1fr;
