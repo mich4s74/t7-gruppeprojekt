@@ -1,38 +1,46 @@
-img {
-  display: block;
-  width: 100%;
-
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
+body {}
 
-
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
 
 h1 {
-<<<<<<< HEAD
   font-family: 'Playfair Display', serif;
-  font size: 2.1875rem;
-  
-
-=======
-  font-family: "Playfair Display", serif;
   font-size: 2.1875rem;
-  color: #c74900;
->>>>>>> c8687f09d419a0165b895278cdbb716be776e8d7
 }
 
 h2 {
   font-family: "Signika Negative", sans-serif;
   font-size: 1.75rem;
-  color: #c74900; 
+  color: #c74900;
 }
 
 h3 {
   font-family: "Signika Negative", sans-serif;
   font-size: 1.4375;
-  color: #c74900; 
+  color: #c74900;
 }
 
 p {
   font-family: "Trirong", serif;
   font-size: 1rem;
+}
+
+nav,
+nav p {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+}
+
+nav ul li a:hover {
+  color: aqua;
 }
