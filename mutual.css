@@ -58,14 +58,6 @@ header,
   height: 3rem;
 }
 
-@media only screen and (min-width: 480px) {
-
-  header,
-  #second_nav {
-    justify-content: space-between;
-  }
-
-}
 
 .logo {
   width: 2rem;
@@ -112,7 +104,7 @@ a,
 li,
 span {
   position: relative;
-  padding: .2rem;
+  padding: 0;
 }
 
 a:after,
@@ -133,4 +125,20 @@ a:hover:after,
 li:hover:after {
   width: 100%;
   left: 0;
+}
+
+
+@media only screen and (min-width: 480px) {
+
+  header,
+  #second_nav {
+    justify-content: space-between;
+  }
+
+  a,
+  li,
+  span {
+    padding: .2rem;
+  }
+
 }
