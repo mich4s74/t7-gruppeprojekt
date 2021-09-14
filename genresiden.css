@@ -9,11 +9,15 @@ h1 {
   color: white;
 }
 
-#secondsection {
+#thirdsection {
+  padding-left: 10px;
   background-image: url(/Billeder_til_andre_sider/vinyl_svg.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right bottom;
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 768px) {
   .kasse {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -21,5 +25,38 @@ h1 {
 
   #firstsection {
     grid-column: 2/3;
+  }
+  #secondsection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #secondsection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+  }
+
+  h2 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-left: 10px;
+  }
+
+  h3 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-left: 10px;
+  }
+  #thirdsection {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-left: 10px;
+  }
+
+  p {
+    max-width: 60ch;
   }
 }
