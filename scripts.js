@@ -1,11 +1,12 @@
 // BURGERMENU
 window.addEventListener("load", sidenVises);
 
+// Når siden vises, lyttes der efter klik på burgerBtn
 function sidenVises() {
   const burgerBtn = document.querySelector("#burger_btn");
   burgerBtn.addEventListener("click", openMenu);
 }
-
+// Ved klik på burgerBtn, starter funktion openMenu, som åbner menuen, og der lyttes igen efter klik på burgerBtn
 function openMenu() {
   const burgerBtn = this;
   const menu = document.querySelector("#menu");
@@ -15,7 +16,7 @@ function openMenu() {
   menu.classList.add("open");
   this.addEventListener("click", closeMenu);
 }
-
+// Ved klik på burgerBtn, starter funktion closeMenu, som lukker menuen og der lyttes igen efter klik på burgerBtn
 function closeMenu() {
   const burgerBtn = this;
   const menu = document.querySelector("#menu");

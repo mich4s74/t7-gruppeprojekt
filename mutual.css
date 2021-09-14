@@ -56,14 +56,12 @@ header ul,
   height: 3rem;
 }
 
-/* styling af header */
+/* Styling af header */
 header {
   background-color: #fb8c4b;
   position: sticky;
   top: 0;
   left: 0;
-
-  /* (for at undgå at img flyder over navbar) */
   z-index: 1;
 }
 
@@ -75,7 +73,7 @@ header nav {
   background-color: #fb8c4b;
 }
 
-/* styling af menu */
+/* Styling af menu */
 li {
   list-style: none;
 }
@@ -85,7 +83,9 @@ a {
 }
 
 #menu {
-  /* position: absolut gør elementets placerering relativt til den nærmeste parent som ikke har position: static (static er default på alle elementer). Her er den relativ ifht "header", da den er position: sticky.  */
+  /* position: absolut gør elementets placerering relativt til den nærmeste parent,
+  som ikke har position: static (static er default på alle elementer). 
+  Her er den relativ ifht "header", da den er position: sticky.  */
   position: absolute;
   top: 0;
   left: 0;
@@ -96,13 +96,8 @@ a {
   align-items: flex-end;
   justify-content: center;
   padding: 20px;
-
   transition: transform 0.3s;
   transform: translateX(-100%);
-}
-
-#menu.open {
-  transform: translateX(0);
 }
 
 #menu a {
@@ -112,7 +107,12 @@ a {
   display: block;
 }
 
-/* styling af burger_btn */
+/* Når man klikker på burger_btn */
+#menu.open {
+  transform: translateX(0);
+}
+
+/* Styling af burger_btn */
 #burger_btn {
   cursor: pointer;
   width: 30px;
