@@ -13,7 +13,18 @@ h1 {
   background-image: url(/Billeder_til_andre_sider/vinyl_svg.svg);
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 800px) {
+  .kasse {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  #firstsection {
+    grid-column: 2/4;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
   .kasse {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
