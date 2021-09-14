@@ -35,6 +35,7 @@
       </nav>
     </header>
 <main>
+    <h2 class="genre"></h2>
   <img class="billede" src="" alt="" />
   <h2 class="navn"></h2>
   <h3>Største hits:</h3>
@@ -96,6 +97,7 @@ function closeMenu() {
   }
 
   function visArtist() {
+     document.querySelector(".genre").textContent = artist.genre;
     document.querySelector(".billede").src = billedUrl + artist.billedenavn;
     document.querySelector(".navn").textContent = artist.navn;
     document.querySelector(".hits").textContent = artist.hits;
