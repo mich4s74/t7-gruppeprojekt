@@ -1,3 +1,28 @@
-main .billede {
-    width: 50%;
+h2 {
+  margin: 20px 0 20px 0;
+  padding: 0 10px 0 10px;
+}
+
+h3 {
+  margin-top: 10px;
+  padding: 0 10px 0 10px;
+}
+
+p {
+  margin-top: 20px;
+  padding: 0 10px 40px 10px;
+  hyphens: auto;
+}
+
+@media only screen and (min-width: 800px) {
+  main {
+    /* display: flex;
+    flex-direction: column;
+    padding: 60px 120px 60px 120px; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  img {
+    grid-column: ;
+  }
 }

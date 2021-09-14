@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-body {}
+body {
+}
 
 img {
   width: 100%;
@@ -14,7 +15,7 @@ img {
 }
 
 h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 2.1875rem;
 }
 
@@ -27,21 +28,20 @@ h2 {
 h3 {
   font-family: "Signika Negative", sans-serif;
   font-size: 1.4375;
-  color: #c74900;
+  color: #7a2d01;
 }
 
 p {
   font-family: "Trirong", serif;
-  font-size: .8rem;
+  font-size: 1rem;
 }
 
 nav,
 nav p,
 header ul {
-  font-family: 'Playfair Display', serif;
-  font-size: .8rem;
+  font-family: "Playfair Display", serif;
+  font-size: 0.8rem;
 }
-
 
 /* Navigation */
 
