@@ -14,7 +14,7 @@ img {
 }
 
 h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 2.1875rem;
 }
 
@@ -22,28 +22,26 @@ h2 {
   font-family: "Signika Negative", sans-serif;
   font-size: 1.75rem;
   color: #000;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 h3 {
   font-family: "Signika Negative", sans-serif;
   font-size: 1.4375;
-  color: #c74900;
+  color: #7a2d01;
 }
 
 p {
   font-family: "Trirong", serif;
-  font-size: .8rem;
+  font-size: 1rem;
 }
 
 nav,
 nav p,
-header ul,
-#second_nav ul {
-  font-family: 'Playfair Display', serif;
-  font-size: .8rem;
+header ul {
+  font-family: "Playfair Display", serif;
+  font-size: 0.8rem;
 }
-
 
 /* Navigation */
 
@@ -58,16 +56,15 @@ header,
   height: 3rem;
 }
 
-@media only screen and (min-width: 480px) {
+<<<<<<< HEAD=======@media only screen and (min-width: 480px) {
 
   header,
   #second_nav {
     justify-content: space-between;
   }
-
 }
 
-.logo {
+>>>>>>>1d11d06c72c810434f4538491c00633fe0041afd .logo {
   width: 2rem;
   height: auto;
 }
@@ -97,7 +94,7 @@ nav ul span {
 nav ul li a:hover,
 header ul li:hover,
 #second_nav ul li:hover {
-  color: #7a2D00;
+  color: #7a2d00;
 }
 
 /* Footer */
@@ -112,7 +109,7 @@ a,
 li,
 span {
   position: relative;
-  padding: .2rem;
+  padding: 0;
 }
 
 a:after,
@@ -124,7 +121,7 @@ li:after {
   height: 2px;
   left: 50%;
   position: absolute;
-  background: #7a2D00;
+  background: #7a2d00;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }
@@ -133,4 +130,20 @@ a:hover:after,
 li:hover:after {
   width: 100%;
   left: 0;
+}
+
+
+@media only screen and (min-width: 480px) {
+
+  header,
+  #second_nav {
+    justify-content: space-between;
+  }
+
+  a,
+  li,
+  span {
+    padding: .2rem;
+  }
+
 }
