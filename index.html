@@ -1,27 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>T7 Gruppeprojekt</title>
-    <meta charset="UTF-8" />
-    <meta name="robots" content="index,nofollow" />
-    <!-- Helps with crawlers -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Helps with responsiveness -->
-    <meta
-      name="description"
-      content="This is the description of the website..."
-    />
-    <!-- Description of the website -->
-    <link rel="icon" href="/html5.ico" />
-    <!-- Favicon -->
-    <link rel="stylesheet" href="mutual.css" />
-    <link rel="stylesheet" href="style.css" />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Signika+Negative&family=Trirong&display=swap"
-    />
-  </head>
+<head>
+  <title>T7 Gruppeprojekt</title>
+  <meta charset="UTF-8" />
+  <meta name="robots" content="index,nofollow" />
+  <!-- Helps with crawlers -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Helps with responsiveness -->
+  <meta name="description" content="This is the description of the website..." />
+  <!-- Description of the website -->
+  <link rel="icon" href="/html5.ico" />
+  <!-- Favicon -->
+  <link rel="stylesheet" href="mutual.css" />
+  <link rel="stylesheet" href="style.css" />
 
+<<<<<<< HEAD
   <body>
     <div id="grid_container">
       <header>
@@ -37,46 +31,69 @@
           </ul>
         </nav>
       </header>
+=======
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Signika+Negative&family=Trirong&display=swap" />
+</head>
+>>>>>>> e118f8996638104c9c9faf4784f7a8bc4cddd6b9
 
-      <section id="intro_header">
-        <img src="images/record.png" alt="" />
-        <div>
-          <h2>We Love Music</h2>
-          <p>
-            Velkommen til getyourmusicinfo.dk. Vi har samlet nogle af de største
-            artister inden for genrene: rock, dancehall, rap og pop. Bladrer
-            igennem galleriet, for at få viden omkring din yndlingsartist.
-          </p>
-        </div>
-      </section>
-
-      <section id="second_nav">
+<body>
+  <div id="grid_container">
+    <header>
+      <img class="logo" src="images/logo.png" alt="Logo" />
+      <nav>
         <ul>
-          <li class="filter" data-artist="alle">Alle</li>
-          <li class="filter" data-artist="Rap">Rap</li>
-          <li class="filter" data-artist="Dancehall">Dancehall</li>
-          <li class="filter" data-artist="Blues Rock">Blues Rock</li>
-          <li class="filter" data-artist="Pop">Pop</li>
+          <li><a href="index.html">Hjem</a></li>
+          <span>//</span>
+          <li><a href="om_os.html">Om os</a></li>
+          <span>//</span>
+          <li><a href="factsomgenre.html">Genre</a></li>
+          <span>//</span>
+          <li><a href="musikhistorie.html">Musikkens historie</a></li>
         </ul>
-      </section>
+      </nav>
+    </header>
 
-      <main>
-        <section id="gallery">
-          <template>
-            <article id="artist">
-              <div class="overlay">
-                <img class="billede" src="" alt="" />
-                <h1 class="navn"></h1>
-                <p class="beskrivelse"></p>
-                <p class="genre"></p>
-                <p class="hits"></p>
-              </div>
-            </article>
-          </template>
-        </section>
-      </main>
-      <footer>Copyright</footer>
-    </div>
-    <script src="scripts.js"></script>
-  </body>
+    <section id="intro_header">
+      <img src="images/record.png" alt="" />
+      <div>
+        <h2>We Love Music</h2>
+        <p>
+          Velkommen til getyourmusicinfo.dk. Vi har samlet nogle af de største
+          artister inden for genrene: rock, dancehall, rap og pop. Bladrer
+          igennem galleriet, for at få viden omkring din yndlingsartist.
+        </p>
+      </div>
+    </section>
+
+    <section id="second_nav">
+      <ul>
+        <li class="filter" data-artist="alle">Alle</li>
+        <li class="filter" data-artist="Rap">Rap</li>
+        <li class="filter" data-artist="Dancehall">Dancehall</li>
+        <li class="filter" data-artist="Blues Rock">Blues Rock</li>
+        <li class="filter" data-artist="Pop">Pop</li>
+      </ul>
+    </section>
+
+    <main>
+      <section id="gallery">
+        <template>
+          <article id="artist">
+            <div class="overlay">
+              <img class="billede" src="" alt="" />
+              <h1 class="navn"></h1>
+              <p class="beskrivelse"></p>
+              <p class="genre"></p>
+              <p class="hits"></p>
+            </div>
+          </article>
+        </template>
+      </section>
+    </main>
+    <footer>Copyright</footer>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+
 </html>
