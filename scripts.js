@@ -69,8 +69,12 @@ function visArtister() {
 }
 
 function visSingle(artist) {
-  location.href = `/detalje.html?id=${artist._id}`;
+  location.href = `/kea/tema7/t7-gruppeprojekt/detalje.html?id=${artist._id}`;
 }
+
+
+// http://michaeltrierhofby.dk/kea/tema7/t7-gruppeprojekt/detalje.html?id=6139e181d943be7d000adfda 
+//
 
 function addEventListenersToButtons() {
   document.querySelectorAll("#second_nav ul li").forEach((elm) => {
