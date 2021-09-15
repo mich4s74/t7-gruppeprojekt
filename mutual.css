@@ -4,8 +4,7 @@
   box-sizing: border-box;
 }
 
-body {
-}
+body {}
 
 img {
   width: 100%;
@@ -98,6 +97,7 @@ a {
   padding: 20px;
   transition: transform 0.3s;
   transform: translateX(-100%);
+  z-index: 200;
 }
 
 #menu a {
@@ -153,6 +153,7 @@ a {
   #burger_btn {
     display: none;
   }
+
   #menu a {
     font-size: 1rem;
   }
@@ -209,8 +210,8 @@ span {
   padding: 0;
 }
 
-a:after,
-li:after {
+ul a:after,
+ul li:after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
   content: "";
@@ -223,8 +224,8 @@ li:after {
   width: 0;
 }
 
-a:hover:after,
-li:hover:after {
+ul a:hover:after,
+ul li:hover:after {
   width: 100%;
   left: 0;
 }
