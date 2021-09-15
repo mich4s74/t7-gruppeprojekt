@@ -20,7 +20,6 @@
 
 header {
   grid-area: header;
-
 }
 
 #second_nav {
@@ -37,15 +36,16 @@ main {
 
 footer {
   grid-area: footer;
-
 }
 
 /* Galleri GRID */
 #gallery {
   --auto-grid-min-size: 24rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill,
-      minmax(var(--auto-grid-min-size), 1fr));
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--auto-grid-min-size), 1fr)
+  );
   background-color: #000;
 }
 
@@ -74,7 +74,6 @@ footer {
 
 #artist .navn,
 #artist .genre {
-  z-index: 110;
   pointer-events: none;
 }
 

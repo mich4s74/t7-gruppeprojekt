@@ -19,18 +19,23 @@
     rel="stylesheet" />
 </head>
 <header>
-      <img class="logo" src="images/logo.png" alt="Logo" />
-      <nav>
-        <ul>
-          <li><a href="index.html">Hjem</a></li>
-          <span>//</span>
-          <li><a href="om_os.html">Om os</a></li>
-          <span>//</span>
-          <li><a href="musikhistorie.html">Musikkens historie</a></li>
-        </ul>
-      </nav>
-    </header>
+
+  <nav>
+    <a href="index.html"><img class="logo" src="images/logo.png" alt="Logo" /></a>
+    <ul id="menu">
+      <li><a href="index.html">Hjem</a></li>
+      <li><a href="om_os.html">Om os</a></li>
+      <li><a href="musikhistorie.html">Musikkens historie</a></li>
+    </ul>
+    <div id="burger_btn">
+      <div class="stroke top"></div>
+      <div class="stroke center"></div>
+      <div class="stroke bottom"></div>
+    </div>
+  </nav>
+</header>
 <main>
+  <h2 class="genre"></h2>
   <img class="billede" src="" alt="" />
   <h2 class="navn"></h2>
   <h3>Største hits:</h3>
@@ -40,11 +45,40 @@
 <footer>Copyright</footer>
 </body>
 <script>
-  const urlParams = new URLSearchParams(window.location.search);
-  billedUrl = "images/resized_images/";
-  const id = urlParams.get("id");
+  // BURGERMENU
+  window.addEventListener("load", sidenVises);
+
+  // Når siden vises, lyttes der efter klik på burgerBtn
+  function sidenVises() {
+    const burgerBtn = document.querySelector("#burger_btn");
+    burgerBtn.addEventListener("click", openMenu);
+  }
+  // Ved klik på burgerBtn, starter funktion openMenu, som åbner menuen, og der lyttes igen efter klik på burgerBtn
+  function openMenu() {
+    const burgerBtn = this;
+    const menu = document.querySelector("#menu");
+
+    this.removeEventListener("click", openMenu);
+    this.classList.add("open");
+    menu.classList.add("open");
+    this.addEventListener("click", closeMenu);
+  }
+  // Ved klik på burgerBtn, starter funktion closeMenu, som lukker menuen og der lyttes igen efter klik på burgerBtn
+  function closeMenu() {
+    const burgerBtn = this;
+    const menu = document.querySelector("#menu");
+
+    this.removeEventListener("click", closeMenu);
+    menu.classList.remove("open");
+    this.addEventListener("click", openMenu);
+  }
+
 
   document.addEventListener("DOMContentLoaded", getJson);
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const billedUrl = "./images/resized_images/";
+  const id = urlParams.get("id");
 
   const url = `https://artister-c311.restdb.io/rest/artister/${id}`;
   const myHeaders = {
@@ -64,11 +98,14 @@
   }
 
   function visArtist() {
+    document.querySelector(".genre").textContent = artist.genre;
     document.querySelector(".billede").src = billedUrl + artist.billedenavn;
     document.querySelector(".navn").textContent = artist.navn;
     document.querySelector(".hits").textContent = artist.hits;
     document.querySelector(".beskrivelse").textContent = artist.beskrivelse;
   }
 </script>
+
+<script src="scripts.js"></script>
 
 </html>

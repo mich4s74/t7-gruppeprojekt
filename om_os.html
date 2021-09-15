@@ -10,15 +10,18 @@
 
 <body>
   <header>
-    <img class="logo" src="images/logo.png" alt="Logo" />
     <nav>
-      <ul>
+      <a href="index.html"><img class="logo" src="images/logo.png" alt="Logo" /></a>
+      <ul id="menu">
         <li><a href="index.html">Hjem</a></li>
-        <span>//</span>
         <li><a href="om_os.html">Om os</a></li>
-        <span>//</span>
         <li><a href="musikhistorie.html">Musikkens historie</a></li>
       </ul>
+      <div id="burger_btn">
+        <div class="stroke top"></div>
+        <div class="stroke center"></div>
+        <div class="stroke bottom"></div>
+      </div>
     </nav>
   </header>
   <main>
@@ -49,7 +52,7 @@
         <section id="section_two_about">
           <figure id="col_1">
             <div class="circular--portrait">
-              <img src="images/" width="1500" height="1500" alt="camillareves" />
+              <img src="images/personer/camillar.jpg" width="1500" height="1500" alt="camillareves" />
             </div>
             <figcaption>
               <h2>Camilla Reves</h2>
@@ -69,7 +72,7 @@
 
           <figure id="col_3">
             <div class="circular--portrait">
-              <img src="" width="1500" height="1500" alt="michaeltrier" />
+              <img src="images/personer/michael.JPG" width="1500" height="1500" alt="michaeltrier" />
             </div>
             <figcaption>
               <h2>Michael Trier-Hofby</h2>
@@ -89,7 +92,7 @@
       </main>
       <footer>Copyright</footer>
 
-      <script src="script.js"></script>
+      <script src="scripts.js"></script>
     </body>
 
 </html>
