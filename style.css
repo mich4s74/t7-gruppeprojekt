@@ -42,10 +42,8 @@ footer {
 #gallery {
   --auto-grid-min-size: 24rem;
   display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(var(--auto-grid-min-size), 1fr)
-  );
+  grid-template-columns: repeat(auto-fill,
+      minmax(var(--auto-grid-min-size), 1fr));
   background-color: #000;
 }
 
@@ -94,12 +92,15 @@ footer {
 
 #intro_header {
   display: flex;
-  justify-items: center;
   align-items: center;
   max-width: 45rem;
-  margin: 0 auto;
+  margin: 2rem auto;
   gap: 12px;
   padding: 5rem 1rem;
+  background-image: url(images/watermark.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
 }
 
 #intro_header img {
