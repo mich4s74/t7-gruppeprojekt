@@ -1,4 +1,4 @@
-img {
+#secondsection img {
   filter: grayscale(100%);
   transition: filter 0.5s ease;
   object-fit: cover;
@@ -6,6 +6,11 @@ img {
 
 img:hover {
   filter: grayscale(0%);
+}
+
+.kasse {
+  background-image: url(images/guitar.svg);
+  background-size: 25%;
 }
 
 #firstsection {
@@ -41,7 +46,7 @@ h3 {
   margin-top: 10px;
 }
 
-img {
+#secondsection img {
   margin-bottom: 20px;
   margin-top: 20px;
 }
@@ -54,11 +59,28 @@ img {
 
   #firstsection {
     grid-column: 2/3;
-    width: 40rem;
   }
+
   #secondsection {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .kasse {
+    background-image: none;
+  }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 768px) {
+  .kasse {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  #firstsection {
+    grid-column: 2/4;
   }
 }
 
@@ -101,7 +123,7 @@ img {
     grid-column: 1/2;
   }
 
-  img {
+  #secondsection img {
     padding-right: 25px;
   }
 }
