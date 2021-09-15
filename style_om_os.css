@@ -54,7 +54,6 @@ h1 {
   transition: filter 0.5s ease;
 }
 
-
 @media (min-width: 425px) {
   #section_one_about {
     display: grid;
