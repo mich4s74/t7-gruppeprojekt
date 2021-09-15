@@ -1,16 +1,16 @@
-<svg id="Component_8_1" data-name="Component 8 – 1" xmlns="http://www.w3.org/2000/svg" width="1110" height="1110" viewBox="0 0 1110 1110">
-  <g id="Group_8" data-name="Group 8" transform="translate(-405 -2038)" style="mix-blend-mode: multiply;isolation: isolate">
-    <g id="Ellipse_3" data-name="Ellipse 3" transform="translate(405 2038)" fill="none" stroke="#d2d2d2" stroke-width="5">
-      <circle cx="555" cy="555" r="555" stroke="none"/>
-      <circle cx="555" cy="555" r="552.5" fill="none"/>
+<svg data-name="Component 8 – 1" xmlns="http://www.w3.org/2000/svg" width="1110" height="1110" style=""><rect id="backgroundrect" width="100%" height="100%" x="0" y="0" fill="none" stroke="none"/>
+  
+<g class="currentLayer" style=""><title>Layer 1</title><g id="Group_8" data-name="Group 8" style="mix-blend-mode: multiply;isolation: isolate" class="selected" opacity="0.71">
+    <g id="Ellipse_3" data-name="Ellipse 3" fill="none" stroke="#d2d2d2" stroke-width="5" opacity="0.71">
+      <circle cx="555" cy="555" r="555" stroke="none" id="svg_1" opacity="0.71"/>
+      <circle cx="555" cy="555" r="552.5" fill="none" id="svg_2" opacity="0.71"/>
     </g>
-    <g id="Ellipse_7" data-name="Ellipse 7" transform="translate(461 2094)" fill="none" stroke="#d2d2d2" stroke-width="5">
-      <circle cx="499" cy="499" r="499" stroke="none"/>
-      <circle cx="499" cy="499" r="496.5" fill="none"/>
+    <g id="Ellipse_7" data-name="Ellipse 7" fill="none" stroke="#d2d2d2" stroke-width="5" opacity="0.71">
+      <circle cx="555" cy="555" r="499" stroke="none" id="svg_3" opacity="0.71"/>
+      <circle cx="555" cy="555" r="496.5" fill="none" id="svg_4" opacity="0.71"/>
     </g>
-    <g id="Ellipse_2" data-name="Ellipse 2" transform="translate(744 2387)" fill="none" stroke="#fa5b00" stroke-width="5">
-      <ellipse cx="216" cy="206" rx="216" ry="206" stroke="none"/>
-      <ellipse cx="216" cy="206" rx="213.5" ry="203.5" fill="none"/>
+    <g id="Ellipse_2" data-name="Ellipse 2" fill="none" stroke="#fa5b00" stroke-width="5" opacity="0.71">
+      <ellipse cx="555" cy="555" rx="216" ry="206" stroke="none" id="svg_5" opacity="0.71"/>
+      <ellipse cx="555" cy="555" rx="213.5" ry="203.5" fill="none" id="svg_6" opacity="0.71"/>
     </g>
-  </g>
-</svg>
+  </g></g></svg>
