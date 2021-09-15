@@ -74,7 +74,6 @@ footer {
 
 #artist .navn,
 #artist .genre {
-  z-index: 110;
   pointer-events: none;
 }
 

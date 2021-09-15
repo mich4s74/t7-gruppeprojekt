@@ -9,9 +9,11 @@ h1 {
 }
 
 #section_one_about {
-  padding: 1rem;
   align-items: center;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 1000px;
 }
 
 #section_two_about {
@@ -58,7 +60,6 @@ h1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
-    padding: 2rem;
   }
 
   #section_two_about {
