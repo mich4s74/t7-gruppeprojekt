@@ -73,6 +73,9 @@ function visSingle(artist) {
 }
 
 
+// http://michaeltrierhofby.dk/kea/tema7/t7-gruppeprojekt/detalje.html?id=6139e181d943be7d000adfda 
+//
+
 function addEventListenersToButtons() {
   document.querySelectorAll("#second_nav ul li").forEach((elm) => {
     elm.addEventListener("click", filtrering);
