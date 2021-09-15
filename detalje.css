@@ -1,9 +1,10 @@
 main {
-  background-image: url(Billeder_til_andre_sider/vinyl_svg.svg);
+  background-image: url(images/watermark.svg);
   background-repeat: no-repeat;
   background-size: 45%;
   background-position: right bottom;
 }
+
 h1 {
   padding: 20px 0 20px 0;
   align-items: center;
