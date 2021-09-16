@@ -1,11 +1,18 @@
+/* colors 
+#7a2D00
+#fb8c4b
+#fa5b00
+#7a4425
+#c74900
+*/
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-body {
-}
+body {}
 
 img {
   width: 100%;
@@ -229,6 +236,10 @@ ul a:hover:after,
 ul li:hover:after {
   width: 100%;
   left: 0;
+}
+
+nav #menu .nav_active {
+  color: #000;
 }
 
 @media only screen and (min-width: 480px) {
