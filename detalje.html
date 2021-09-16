@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>TITLE</title>
+  <title>Artist</title>
   <meta charset="UTF-8" />
   <meta name="robots" content="index,follow" />
   <!-- Helps with crawlers -->
@@ -44,12 +44,10 @@
 <footer>Copyright</footer>
 </body>
 <script>
-  document.addEventListener("DOMContentLoaded", getJson);
-
+  // VARIABLER
   const urlParams = new URLSearchParams(window.location.search);
   const id = urlParams.get("id");
   const billedUrl = "images/resized_images/";
-
   const url = `https://artister-c311.restdb.io/rest/artister/${id}`;
   const myHeaders = {
     headers: {
@@ -57,14 +55,18 @@
     },
   };
 
+  // FETCHER JSON DATAEN NÅR DOM CONTENT ER LOADED IND
+  document.addEventListener("DOMContentLoaded", getJson);
+
   async function getJson() {
     let jsonData = await fetch(url, myHeaders);
     artist = await jsonData.json();
-    console.log("Artister", artist);
+    console.log("Artist", artist);
 
     visArtist(artist);
   }
 
+  // VISER JSON DATAEN PÅ SIDEN OG INDSÆTTER DYNAMISK CONTENT
   function visArtist() {
     document.querySelector(".genre").textContent = artist.genre;
     document.querySelector(".billede").src = billedUrl + artist.billedenavn;
@@ -72,7 +74,6 @@
     document.querySelector(".hits").textContent = artist.hits;
     document.querySelector(".beskrivelse").textContent = artist.beskrivelse;
   }
-
 
   // BURGERMENU
   window.addEventListener("load", sidenVises);

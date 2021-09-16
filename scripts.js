@@ -50,16 +50,16 @@ function visSingle(artist) {
 }
 
 
-// FILTRERING AF ARRAY
+// KIGGER EFTER HVILKET ELEMENT BLEV KLIKKET PÅ I FILTRERINGSMENU OG KØRER FUNKTIONEN FILTRERING
 function addEventListenersToButtons() {
   document.querySelectorAll("#second_nav ul li").forEach((elm) => {
     elm.addEventListener("click", filtrering);
   });
 }
 
+// FILTRERER BASERET PÅ filterArtist I VisArtister funktionen
 function filtrering() {
   filterArtist = this.dataset.artist;
-  /*document.querySelector("main h1").textContent = this.textContent;*/
   visArtister();
 }
 
