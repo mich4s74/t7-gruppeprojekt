@@ -1,31 +1,4 @@
-// BURGERMENU
-window.addEventListener("load", sidenVises);
-
-// Når siden vises, lyttes der efter klik på burgerBtn
-function sidenVises() {
-  const burgerBtn = document.querySelector("#burger_btn");
-  burgerBtn.addEventListener("click", openMenu);
-}
-// Ved klik på burgerBtn, starter funktion openMenu, som åbner menuen, og der lyttes igen efter klik på burgerBtn
-function openMenu() {
-  const burgerBtn = this;
-  const menu = document.querySelector("#menu");
-
-  this.removeEventListener("click", openMenu);
-  this.classList.add("open");
-  menu.classList.add("open");
-  this.addEventListener("click", closeMenu);
-}
-// Ved klik på burgerBtn, starter funktion closeMenu, som lukker menuen og der lyttes igen efter klik på burgerBtn
-function closeMenu() {
-  const burgerBtn = this;
-  const menu = document.querySelector("#menu");
-
-  this.removeEventListener("click", closeMenu);
-  menu.classList.remove("open");
-  this.addEventListener("click", openMenu);
-}
-
+// VARIABLER
 let artister;
 const url = "https://artister-c311.restdb.io/rest/artister";
 const myHeaders = {
@@ -38,6 +11,8 @@ const theTemplatePointer = document.querySelector("template");
 const billedUrl = "images/resized_images/";
 let filterArtist = "alle";
 
+
+// FETCHER JSON DATAEN NÅR DOM CONTENT ER LOADED IND
 document.addEventListener("DOMContentLoaded", getJson);
 
 async function getJson() {
@@ -49,6 +24,7 @@ async function getJson() {
   addEventListenersToButtons();
 }
 
+// VISER JSON DATAEN I GALLERIET OG INDSÆTTER DYNAMISK CONTENT
 function visArtister() {
   dest.innerHTML = "";
   artister.forEach((artist) => {
@@ -68,14 +44,13 @@ function visArtister() {
   });
 }
 
+// DIRIGERER TIL SINGLE ARTIST MED KORREKT ID
 function visSingle(artist) {
   location.href = `/kea/tema7/t7-gruppeprojekt/detalje.html?id=${artist._id}`;
 }
 
 
-// http://michaeltrierhofby.dk/kea/tema7/t7-gruppeprojekt/detalje.html?id=6139e181d943be7d000adfda 
-//
-
+// FILTRERING AF ARRAY
 function addEventListenersToButtons() {
   document.querySelectorAll("#second_nav ul li").forEach((elm) => {
     elm.addEventListener("click", filtrering);
@@ -87,11 +62,6 @@ function filtrering() {
   /*document.querySelector("main h1").textContent = this.textContent;*/
   visArtister();
 }
-
-/*document.querySelector(".burger").addEventListener("click", () => {
-  document.querySelector("nav").classList.toggle("show");
-});
-*/
 
 // BURGERMENU
 window.addEventListener("load", sidenVises);
