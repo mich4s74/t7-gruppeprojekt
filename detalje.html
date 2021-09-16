@@ -19,7 +19,6 @@
     rel="stylesheet" />
 </head>
 <header>
-
   <nav>
     <a href="index.html"><img class="logo" src="images/logo.png" alt="Logo" /></a>
     <ul id="menu">
@@ -45,6 +44,36 @@
 <footer>Copyright</footer>
 </body>
 <script>
+  document.addEventListener("DOMContentLoaded", getJson);
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const id = urlParams.get("id");
+  const billedUrl = "images/resized_images/";
+
+  const url = `https://artister-c311.restdb.io/rest/artister/${id}`;
+  const myHeaders = {
+    headers: {
+      "x-apikey": "613a5a7043cedb6d1f97ef14",
+    },
+  };
+
+  async function getJson() {
+    let jsonData = await fetch(url, myHeaders);
+    artist = await jsonData.json();
+    console.log("Artister", artist);
+
+    visArtist(artist);
+  }
+
+  function visArtist() {
+    document.querySelector(".genre").textContent = artist.genre;
+    document.querySelector(".billede").src = billedUrl + artist.billedenavn;
+    document.querySelector(".navn").textContent = artist.navn;
+    document.querySelector(".hits").textContent = artist.hits;
+    document.querySelector(".beskrivelse").textContent = artist.beskrivelse;
+  }
+
+
   // BURGERMENU
   window.addEventListener("load", sidenVises);
 
@@ -72,40 +101,6 @@
     menu.classList.remove("open");
     this.addEventListener("click", openMenu);
   }
-
-
-  document.addEventListener("DOMContentLoaded", getJson);
-
-  const urlParams = new URLSearchParams(window.location.search);
-  const billedUrl = "./images/resized_images/";
-  const id = urlParams.get("id");
-
-  const url = `https://artister-c311.restdb.io/rest/artister/${id}`;
-  const myHeaders = {
-    headers: {
-      "x-apikey": "613a5a7043cedb6d1f97ef14",
-    },
-  };
-
-  console.log("ID", id);
-
-  async function getJson() {
-    let jsonData = await fetch(url, myHeaders);
-    artist = await jsonData.json();
-    console.log("Artister", artist);
-
-    visArtist(artist);
-  }
-
-  function visArtist() {
-    document.querySelector(".genre").textContent = artist.genre;
-    document.querySelector(".billede").src = billedUrl + artist.billedenavn;
-    document.querySelector(".navn").textContent = artist.navn;
-    document.querySelector(".hits").textContent = artist.hits;
-    document.querySelector(".beskrivelse").textContent = artist.beskrivelse;
-  }
 </script>
-
-<script src="scripts.js"></script>
 
 </html>
